@@ -41,5 +41,3 @@ deck.push ({color: null , number: "CC", type: "Comodin"});
 //console.log(deck);
 
 const players = rl.question("¿Cuantos jugadores serán?" , {})
-
-console.log(players)
