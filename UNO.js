@@ -39,5 +39,25 @@ deck.push ({color: null , number: "CC", type: "Comodin"});
 deck.push ({color: null , number: "CC", type: "Comodin"});
 
 //console.log(deck);
+//npm init (inicializat un proyecto en node)
 
 const players = rl.question("¿Cuantos jugadores serán?" , {})
+<<<<<<< Updated upstream
+=======
+const TotalCards = players * 7;
+//Repartir 7 cartas por jugador 
+//Dependencia es un codigo que depende de otro para fucnionar 
+//un arreglo por cada jugador 
+var cardsXPlayres = {};
+
+for(var CTCards = 0; CTCards < TotalCards; CTCards++){
+    for(var CPlayers = 0; CPlayers < players; CPlayers++ ){
+        console.log(" player: " , CPlayers);
+        cardsXPlayres["player_"+CPlayers] = [];
+        cardsXPlayres["player_"+CPlayers].push(deck[CTCards]);
+    }
+    cardsXPlayres["player_"+CPlayers].push(deck[CTCards]);
+    console.log(cardsXPlayres);
+}
+console.log(cardsXPlayres);
+>>>>>>> Stashed changes
