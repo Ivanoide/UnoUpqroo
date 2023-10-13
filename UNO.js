@@ -1,63 +1,73 @@
+// para solicitar al usuario
 const rl = require("readline-sync");
 
-// juego UNO 
+//juego UNO
 var deck = [];
-var colors = ["Yellow", "Blue", "Green", "Red"];
-var types = ["Comun", "Especial", "Comodin"];
-
+var colors = ["Yellow","Blue", "Green", "Red"];
+var types = ["Comun", "Especial","Comodin"];
 var card = {
-    color: null, //el color puede ser amarillo, azul, verde y rojo
-    number: null, // el numero del 0 al 9
-    type: null, // comunes, especiales y comodines
+    color: null, // amarillo, azul , verde , rojo 
+    number: null, // 0-9
+    Type: null // comun, especiales y comodines
 };
 
-for (var ccolor = 0;  ccolor < colors.length; ccolor++){
-    console.log("color", colors [ccolor]);
-    for (var cNumber = 0; cNumber < 10; cNumber ++){
-        deck.push({color: colors[ccolor], number: cNumber, type: "Comun"});
-
+for (var cColor = 0; cColor < colors.length; cColor++ ){
+    
+    for (var cNumber = 0; cNumber < 10; cNumber++){
+        
+        deck.push({color: colors[cColor], number: cNumber, type: "comun"});
     }
-
-    for (var cNumber1 = 1; cNumber1 < 10; cNumber1 ++){
+    for (var cNumber1 = 1; cNumber < 10; cNumber1++){
+        
     }
+    deck.push({color: colors[cColor], number: "+2", type: "comun"});
+    deck.push({color: colors[cColor], number: "+2", type: "comun"});
+    deck.push({color: colors[cColor], number: "B", type: "comun"});
+    deck.push({color: colors[cColor], number: "B", type: "comun"});
+    deck.push({color: colors[cColor], number: "R", type: "comun"});
+    deck.push({color: colors[cColor], number: "R", type: "comun"});
 
-    deck.push ({color: colors[ccolor], number: "+2", type: "Comun"});
-    deck.push ({color: colors[ccolor], number: "+2" , type: "Comun"});
-    deck.push ({color: colors[ccolor], number: "Block", type: "Comun"});
-    deck.push ({color: colors[ccolor], number: "Block", type: "Comun"});
-    deck.push ({color: colors[ccolor], number: "Retro", type: "Comun"});
-    deck.push ({color: colors[ccolor], number: "Retro", type: "Comun"});
-}
+} 
 
-deck.push ({color: null , number: "+4", type: "Comodin"});
-deck.push ({color: null , number: "+4" , type: "Comodin"});
-deck.push ({color: null , number: "+4", type: "Comodin"});
-deck.push ({color: null , number: "+4", type: "Comodin"});
-deck.push ({color: null , number: "CC", type: "Comodin"});
-deck.push ({color: null , number: "CC", type: "Comodin"});
-deck.push ({color: null , number: "CC", type: "Comodin"});
-deck.push ({color: null , number: "CC", type: "Comodin"});
+deck.push({color: null, number: "+4", type: "comun"});
+deck.push({color: null, number: "+4", type: "comun"});
+deck.push({color: null, number: "+4", type: "comun"});
+deck.push({color: null, number: "+4", type: "comun"});
+deck.push({color: null, number: "CC", type: "comun"});
+deck.push({color: null, number: "CC", type: "comun"});
+deck.push({color: null, number: "CC", type: "comun"});
+deck.push({color: null, number: "CC", type: "comun"});
+
+//npm init (inicializar un proyecto en node)
+//verifico que tenga el archivo package-json
+//npm install o i <modulo>
 
 //console.log(deck);
-//npm init (inicializat un proyecto en node)
 
-const players = rl.question("¿Cuantos jugadores serán?" , {})
-<<<<<<< Updated upstream
-=======
-const TotalCards = players * 7;
-//Repartir 7 cartas por jugador 
-//Dependencia es un codigo que depende de otro para fucnionar 
-//un arreglo por cada jugador 
-var cardsXPlayres = {};
+const players = rl.question("¿cuantos jugadores seran?", {})
+const totalcards = players * 7;
+//repartir 7 cartas x jugador
+//dependencia (un codigo que depende de otro codigo)
+// node package manager (npm)
+// recorro el total de tarjetas (total de tarjetas = tarjetas x jugador)
+// un arreglo x jugador 
+//investigar comparadores, varidarodes de variables 
+var cardsPlayers = {};
 
-for(var CTCards = 0; CTCards < TotalCards; CTCards++){
-    for(var CPlayers = 0; CPlayers < players; CPlayers++ ){
-        console.log(" player: " , CPlayers);
-        cardsXPlayres["player_"+CPlayers] = [];
-        cardsXPlayres["player_"+CPlayers].push(deck[CTCards]);
-    }
-    cardsXPlayres["player_"+CPlayers].push(deck[CTCards]);
-    console.log(cardsXPlayres);
+for(var cTcards = 0; cTcards < 7; cTcards++){
+    for(var cPlayers = 0; cPlayers < players; cPlayers++) {
+        //console.log(" players ", cPlayers)
+        if (!cardsPlayers["player_"+cPlayers]) {
+            cardsPlayers["player_"+cPlayers] = [];
+        }
+
+        cardsPlayers["player_"+cPlayers].push(deck.shift());;
+        //console.log(deck.shift());
+        //console.log(cardsPlayers)
+        }
 }
-console.log(cardsXPlayres);
->>>>>>> Stashed changes
+
+var trash = [];
+trash.push(deck.shift());
+
+console.log(trash);
