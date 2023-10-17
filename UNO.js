@@ -71,3 +71,27 @@ var trash = [];
 trash.push(deck.shift());
 
 console.log(trash);
+
+function cardValidation (card) {
+    console.log(card.number);
+    //length regresa el tamaño total del arreglo
+//Los operadores amperson (&&) evaluan y si las dos se cumplen para ejecutar, si una de ellas no se cumple, no se ejecuta
+//Los operadores pibe (||) evaluan que uno u otro sea verdadero y si una lo es se ejecuta
+
+    if (card.number == trash[trash.length-1].number || card.color == trash [trash.length-1].color ) {
+        console.log("es igual");
+    } else { console.log("no es igual"); }
+        
+    }
+cardValidation({color: "Yellow", number: 3, types: "comun"})
+
+//mostrar todas las cartras que le tocaron al maso del primer jugador
+
+for (const player in cardsPlayers){
+    console.log(cardsPlayers[player]);
+    //Primer player ponga una carta de
+    // PASO 1:Ver mis cartas
+    // PASO 2: Elegir carta 
+    // PASO 3: Validar carta
+    // PASO 4: Poner carta (de mano a jugardor a trash)
+}

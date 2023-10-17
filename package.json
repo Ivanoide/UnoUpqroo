@@ -1,0 +1,22 @@
+{
+  "name": "unoupqroo",
+  "version": "1.0.0",
+  "description": "Juego Uno en Noode.js",
+  "main": "UNO.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivanoide/UnoUpqroo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivanoide/UnoUpqroo/issues"
+  },
+  "homepage": "https://github.com/Ivanoide/UnoUpqroo#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
