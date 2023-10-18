@@ -8,3 +8,16 @@ node_modules/readline-sync/README-Deprecated.md
 node_modules/readline-sync/package.json
 node_modules/readline-sync/lib/read.sh
 node_modules/readline-sync/LICENSE
+node_modules/generate-random-data/HISTORY.md
+node_modules/moment/ts3.1-typings/moment.d.ts
+node_modules/generate-random-data/LICENSE
+node_modules/generate-random-data/package.json
+node_modules/generate-random-data/README.md
+node_modules/moment/CHANGELOG.md
+node_modules/moment/min/locales.min.js.map
+node_modules/moment/LICENSE
+node_modules/moment/min/moment-with-locales.min.js.map
+node_modules/moment/min/moment.min.js.map
+node_modules/moment/moment.d.ts
+node_modules/moment/package.json
+node_modules/moment/README.md

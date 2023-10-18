@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Ivanoide/UnoUpqroo#readme",
   "dependencies": {
+    "generate-random-data": "^0.0.3",
     "readline-sync": "^1.4.10"
   }
 }

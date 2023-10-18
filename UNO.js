@@ -1,6 +1,6 @@
 // para solicitar al usuario
 const rl = require("readline-sync");
-
+let MazoRevuelto = require('./modules/revuelveMazo')
 //juego UNO
 var deck = [];
 var colors = ["Yellow","Blue", "Green", "Red"];
@@ -95,3 +95,9 @@ for (const player in cardsPlayers){
     // PASO 3: Validar carta
     // PASO 4: Poner carta (de mano a jugardor a trash)
 }
+
+MazoRevuelto(deck);
+
+console.log("Mazo revuelto:");
+console.log(deck);
+
