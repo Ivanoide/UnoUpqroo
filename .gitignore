@@ -1,7 +1,5 @@
 
-*.js
-UNO.js
-node_modules/.package-lock.json
+node_modules/
 node_modules/readline-sync/lib/read.ps1
 node_modules/readline-sync/README.md
 node_modules/readline-sync/README-Deprecated.md
